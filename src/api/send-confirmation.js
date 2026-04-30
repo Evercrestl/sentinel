@@ -3,6 +3,10 @@ import { Resend } from 'resend';
 // @ts-ignore
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const siteUrl = process.env.VERCEL_URL 
+  ? `https://${process.env.VERCEL_URL}` 
+  : 'http://localhost:5173';
+
 // @ts-ignore
 export default async function handler(req, res) {
   // CORS
@@ -88,7 +92,7 @@ function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency }
                       <td align="center">
                         <a href="${
 // @ts-ignore
-                        process.env.VITE_SITE_URL}/track-case"
+                        siteUrl}/track-case"
                           style="display:inline-block;padding:12px 28px;background:#4f6bed;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:8px;">
                           Track Your Case
                         </a>
