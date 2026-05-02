@@ -90,9 +90,7 @@ function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency }
                   <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
                     <tr>
                       <td align="center">
-                        <a href="${
-// @ts-ignore
-                        siteUrl}/track-case"
+                        <a href="${Deno.env.get('SITE_URL')}/track-case"
                           style="display:inline-block;padding:12px 28px;background:#4f6bed;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:8px;">
                           Track Your Case
                         </a>
