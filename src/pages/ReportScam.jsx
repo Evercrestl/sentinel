@@ -14,7 +14,7 @@
  */
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { supabase } from '@/api/supabaseClient';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Send, CheckCircle, Lock, Copy } from 'lucide-react';
