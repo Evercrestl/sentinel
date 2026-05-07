@@ -221,7 +221,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Search, Lock, ArrowRight, Shield, Clock, AlertTriangle, CheckCircle, Loader2, RefreshCw, Banknote } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 
 /** @type {Record<string, { label: string, color: string, icon: React.ElementType }>} */
