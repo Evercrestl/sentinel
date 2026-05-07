@@ -14,7 +14,7 @@
  */
 
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '@/api/supabaseClient';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Send, CheckCircle, Lock, Copy } from 'lucide-react';
@@ -33,6 +33,7 @@ function generateCaseId() {
 }
 
 export default function ReportScam() {
+  const navigate = useNavigate();
   const [step, setStep] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -41,6 +42,7 @@ export default function ReportScam() {
     currency: 'USD',
     evidence_files: [],
   }));
+
 
   const validateStep = () => {
     if (step === 0) {
@@ -166,13 +168,13 @@ export default function ReportScam() {
             <span>A confirmation has been sent to {formData.email}</span>
           </div>
 
-          <Link to='/track-case' onClick={() => window.location.href = '/track-case'}>
+          
           <Button
-            className="bg-primary text-primary-foreground glow-cobalt"
+            className="bg-primary text-primary-foreground glow-cobalt" onClick={() => navigate('/track-case')}
           >
             Track Your Case
           </Button>
-          </Link>
+      
         </motion.div>
       </div>
     );
