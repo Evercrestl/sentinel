@@ -166,12 +166,13 @@ export default function ReportScam() {
             <span>A confirmation has been sent to {formData.email}</span>
           </div>
 
+          <Link to='/track-case' onClick={() => window.location.href = '/track-case'}>
           <Button
             className="bg-primary text-primary-foreground glow-cobalt"
-            onClick={() => window.location.href = '/track-case'}
           >
             Track Your Case
           </Button>
+          </Link>
         </motion.div>
       </div>
     );
