@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:glow-cobalt transition-all duration-300">
-              <img src="sentrix_logo.png" alt="Logo" />
+              <img src="sentrix_logo.png" alt="Logo" class1name="w-5 h-5" />
               {/* <Shield className="w-5 h-5 text-primary" /> */}
             </div>
             <div>
