@@ -170,7 +170,7 @@ export default function ReportScam() {
 
           
           <Button
-            className="bg-primary text-primary-foreground glow-cobalt" onClick={() => navigate('/track-case')}
+            className="bg-primary text-primary-foreground glow-cobalt" onClick={() => navigate(`/track-case?id=${caseId}`)}
           >
             Track Your Case
           </Button>
