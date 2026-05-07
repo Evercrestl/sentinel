@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-4">
               <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                 {/* <Shield className="w-5 h-5 text-primary" /> */}
-                <img src="/sentrix-logo.png" className="w-5 h-5" alt="logo"/>
+                <img src="sentrix_logo.png" className="w-5 h-5" alt="logo"/>
               </div>
               <div>
                 <span className="text-sm font-bold tracking-tight">SENTRIX</span>
