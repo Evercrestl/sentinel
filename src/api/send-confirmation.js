@@ -3,9 +3,7 @@ import { Resend } from 'resend';
 // @ts-ignore
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const siteUrl = process.env.VERCEL_URL 
-  ? `https://${process.env.VERCEL_URL}` 
-  : 'http://localhost:5173';
+const siteUrl = process.env.SITE_URL || 'http://localhost:5173';
 
 // @ts-ignore
 export default async function handler(req, res) {
