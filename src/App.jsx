@@ -46,7 +46,6 @@ const AuthenticatedApp = () => {
         <Route path="/track-case" element={<TrackCase />} />
         <Route path="/case/:id" element={<CaseDetail />} />
         <Route path="/recovery-services" element={<RecoveryServices />} />
-        <Route path="/track-case" element={<TrackCase />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
