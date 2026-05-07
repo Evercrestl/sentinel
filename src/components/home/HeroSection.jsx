@@ -99,7 +99,7 @@ export default function HeroSection({ heroImage }) {
             <div>
               <div className="flex items-center gap-1.5 mb-1">
                 <TrendingUp className="w-4 h-4 text-emerald-500" />
-                <span className="text-2xl font-bold font-mono">$2.4M</span>
+                <span className="text-2xl font-bold font-mono">$12.4M</span>
               </div>
               <p className="text-xs text-muted-foreground">Recovered</p>
             </div>
