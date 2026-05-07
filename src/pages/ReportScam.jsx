@@ -14,6 +14,7 @@
  */
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { supabase } from '@/api/supabaseClient';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Send, CheckCircle, Lock, Copy } from 'lucide-react';
@@ -151,9 +152,11 @@ export default function ReportScam() {
             <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider">Your Case ID</p>
             <div className="flex items-center justify-center gap-3">
               <span className="text-2xl font-bold font-mono text-primary">{caseId}</span>
+              <Link to="/track-case">
               <Button variant="ghost" size="icon" className="h-8 w-8" onClick={copyCaseId}>
                 <Copy className="w-4 h-4" />
               </Button>
+                </Link>
             </div>
             <p className="text-xs text-muted-foreground mt-2">Save this ID to track your case progress</p>
           </div>
