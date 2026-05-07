@@ -51,7 +51,7 @@ export default function Footer() {
             <div className="space-y-2.5">
               <a href="mailto:info@sentinel-recovery.com" className="flex items-center gap-2 text-sm text-foreground/70 hover:text-primary transition-colors">
                 <Mail className="w-3.5 h-3.5" />
-                help@sentrixinvestigation.online
+                help@sentrixinvestigations.online
               </a>
               <a href="tel:+18005551234" className="flex items-center gap-2 text-sm text-foreground/70 hover:text-primary transition-colors">
                 <Phone className="w-3.5 h-3.5" />
