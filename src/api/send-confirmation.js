@@ -33,7 +33,7 @@ export default async function handler(req, res) {
 }
 
 // @ts-ignore
-function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency, siteUtrl }) {
+function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency, siteUrl }) {
   return `
     <!DOCTYPE html>
     <html>
