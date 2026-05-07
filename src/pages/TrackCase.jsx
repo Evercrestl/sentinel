@@ -411,9 +411,11 @@ const [updates, setUpdates]     = useState(/** @type {CaseUpdate[]} */ ([]));
 
             <div className="bg-card rounded-xl filament-border p-6">
               <Link to={`/case/${foundCase.id}`}>
-                <Button className="w-full bg-primary text-primary-foreground gap-2 glow-cobalt h-11">
-                  <Banknote className="w-4 h-4" />
+                <Button className="w-full bg-primary text-primary-foreground gap-2 glow-cobalt h-auto min-h-[44px] py-3 px-4 whitespace-normal text-center flex items-center justify-center">
+                  <Banknote className="w-4 h-4  shrink-0" />
+                  <span className="text-sm sm:text-base leading-tight">
                   View Full Case & Communicate with Investigator
+                  </span>
                 </Button>
               </Link>
             </div>
