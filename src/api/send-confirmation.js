@@ -24,7 +24,7 @@ export default async function handler(req, res) {
   }
 
   const { error } = await resend.emails.send({
-    from: 'Sentinel Fraud Recovery <onboarding@resend.dev>',
+    from: 'Sentrix Investigations Fraud Recovery <onboarding@resend.dev>',
     to,
     subject: `Case Confirmation: ${case_id} — Sentinel Fraud Recovery`,
     html: buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency }),
@@ -90,7 +90,7 @@ function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency }
                   <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
                     <tr>
                       <td align="center">
-                        <a href="${Deno.env.get('SITE_URL')}/track-case"
+                        <a href="${siteUrl)}/track-case"
                           style="display:inline-block;padding:12px 28px;background:#4f6bed;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-radius:8px;">
                           Track Your Case
                         </a>
