@@ -45,21 +45,21 @@ export default function Contact() {
             <div className="p-6 rounded-xl filament-border bg-card/50">
               <h3 className="text-sm font-semibold mb-4">Direct Contact</h3>
               <div className="space-y-4">
-                <a href="mailto:info@sentinel-recovery.com" className="flex items-center gap-3 group">
+                <a href="mailto:info@sentrixinvestigations.com" className="flex items-center gap-3 group">
                   <div className="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center">
                     <Mail className="w-4 h-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium group-hover:text-primary transition-colors">info@sentinel-recovery.com</p>
+                    <p className="text-sm font-medium group-hover:text-primary transition-colors">info@sentrixinvestigations.com</p>
                     <p className="text-xs text-muted-foreground">General Inquiries</p>
                   </div>
                 </a>
-                <a href="tel:+18005551234" className="flex items-center gap-3 group">
+                <a href="tel:+13345440563" className="flex items-center gap-3 group">
                   <div className="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center">
                     <Phone className="w-4 h-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium group-hover:text-primary transition-colors">+1 (800) 555-1234</p>
+                    <p className="text-sm font-medium group-hover:text-primary transition-colors">+1 (334) 544-0563</p>
                     <p className="text-xs text-muted-foreground">Mon–Fri, 9AM–6PM EST</p>
                   </div>
                 </a>
