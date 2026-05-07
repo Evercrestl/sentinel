@@ -214,7 +214,7 @@
 //   );
 // }
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { supabase } from '@/api/supabaseClient';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -235,7 +235,8 @@ const statusConfig = {
 };
 
 export default function TrackCase() {
-  const [caseIdInput, setCaseIdInput] = useState('');
+  const [searchParams] = useSearchParams();
+  const [caseIdInput, setCaseIdInput] = useState(searchParams.get('id') ?? '');
   const [loading, setLoading]         = useState(false);
   // const [foundCase, setFoundCase]     = useState(null);
   // const [updates, setUpdates]         = useState([]);
@@ -273,6 +274,10 @@ const [updates, setUpdates]     = useState(/** @type {CaseUpdate[]} */ ([]));
     setUpdates(caseUpdates ?? []);
     setLoading(false);
   };
+
+  useEffect(() => {
+    if(searchParams.get('id')) handleSearch();
+  }, []);
 
   return (
     <div className="min-h-screen py-20 px-4">
