@@ -1,7 +1,7 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 
 const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-const FROM_EMAIL = 'Sentinel Fraud Recovery <onboarding@resend.dev>';
+const FROM_EMAIL = 'Sentrix Investigation - Fraud Recovery <help@sentrixinvestigations.online>';
 
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -25,7 +25,7 @@ serve(async (req) => {
       body: JSON.stringify({
         from: FROM_EMAIL,
         to,
-        subject: `Case Confirmation: ${case_id} — Sentinel Fraud Recovery`,
+        subject: `Case Confirmation: ${case_id} — Sentrix Investigations - Fraud Recovery`,
         html: `
           <!DOCTYPE html>
           <html>
@@ -109,7 +109,7 @@ serve(async (req) => {
 
                         <p style="margin:0;font-size:13px;color:#475569;line-height:1.6;">
                           If you did not file this report, please contact us immediately at 
-                          <a href="mailto:support@yourdomain.com" style="color:#4f6bed;text-decoration:none;">support@yourdomain.com</a>.
+                          <a href="mailto:support@sentrixinvestigations.online" style="color:#4f6bed;text-decoration:none;"support@sentrixinvestigations.online</a>.
                         </p>
                       </td>
                     </tr>
@@ -118,7 +118,7 @@ serve(async (req) => {
                     <tr>
                       <td style="padding:20px 40px;border-top:1px solid rgba(148,163,184,0.08);">
                         <p style="margin:0;font-size:12px;color:#334155;text-align:center;">
-                          Sentinel Fraud Recovery — All communications are encrypted and confidential.
+                          Sentrix Investigations Fraud Recovery — All communications are encrypted and confidential.
                         </p>
                       </td>
                     </tr>
