@@ -15,16 +15,16 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { to, full_name, case_id, scam_type, amount_lost, currency } = req.body;
+  const { to, full_name, case_id, scam_type, amount_lost, currency, siteUrl } = req.body;
 
   if (!to || !case_id) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
   const { error } = await resend.emails.send({
-    from: 'Sentrix Investigations Fraud Recovery <onboarding@resend.dev>',
+    from: 'Sentrix Investigations Fraud Recovery <help@sentrixinvestigations.online>',
     to,
-    subject: `Case Confirmation: ${case_id} — Sentinel Fraud Recovery`,
+    subject: `Case Confirmation: ${case_id} — Sentrix Investigations - Fraud Recovery`,
     html: buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency, siteUrl }),
   });
 
@@ -97,14 +97,14 @@ function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency, 
                   </table>
                   <p style="margin:0;font-size:13px;color:#475569;line-height:1.6;">
                     If you did not file this report, please contact us immediately at
-                    <a href="mailto:support@yourdomain.com" style="color:#4f6bed;text-decoration:none;">support@yourdomain.com</a>.
+                    <a href="mailto:support@sentrixinvestigations.online" style="color:#4f6bed;text-decoration:none;">support@sentrixinvestigations.online</a>.
                   </p>
                 </td>
               </tr>
               <tr>
                 <td style="padding:20px 40px;border-top:1px solid rgba(148,163,184,0.08);">
                   <p style="margin:0;font-size:12px;color:#334155;text-align:center;">
-                    Sentinel Fraud Recovery — All communications are encrypted and confidential.
+                    Sentrix Investigations - Fraud Recovery — All communications are encrypted and confidential.
                   </p>
                 </td>
               </tr>
