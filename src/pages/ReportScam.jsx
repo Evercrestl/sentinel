@@ -104,7 +104,7 @@ export default function ReportScam() {
       const EMAIL_API = import.meta.env.VITE_EMAIL_API_URL ?? '';
       // Send confirmation email — non-blocking, don't throw on failure
       try {
-        await fetch(`${EMAIL_API}/API/SEND-CONFIRMATION`, {
+        await fetch(`${EMAIL_API}/api/send-confirmation`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
