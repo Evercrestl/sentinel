@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     from: 'Sentrix Investigations Fraud Recovery <help@sentrixinvestigations.online>',
     to,
     subject: `Case Confirmation: ${case_id} — Sentrix Investigations - Fraud Recovery`,
-    html: buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency, siteUrl }),
+    html: buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency }),
   });
 
   if (error) return res.status(500).json({ error });
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
 }
 
 // @ts-ignore
-function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency, siteUrl }) {
+function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency }) {
   return `
     <!DOCTYPE html>
     <html>
@@ -45,7 +45,7 @@ function buildEmailHtml({ full_name, case_id, scam_type, amount_lost, currency, 
             <table width="560" cellpadding="0" cellspacing="0" style="background:#0a0d14;border:1px solid rgba(148,163,184,0.08);border-radius:12px;overflow:hidden;">
               <tr>
                 <td style="padding:32px 40px 24px;border-bottom:1px solid rgba(148,163,184,0.08);">
-                  <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#4f6bed;">Sentinel Fraud Recovery</p>
+                  <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#4f6bed;">Sentrix Investigations - Fraud Recovery</p>
                   <h1 style="margin:8px 0 0;font-size:22px;font-weight:700;color:#f8fafc;">Case Successfully Filed</h1>
                 </td>
               </tr>
